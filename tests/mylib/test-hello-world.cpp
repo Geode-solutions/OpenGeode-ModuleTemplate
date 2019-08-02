@@ -21,8 +21,6 @@
  *
  */
 
-#include <mylib/tests_config.h>
-
 #include <geode/basic/assert.h>
 #include <geode/basic/logger.h>
 
