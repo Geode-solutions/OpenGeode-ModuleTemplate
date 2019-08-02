@@ -24,6 +24,13 @@ jobs:
       parameters:
         type: "Debug"
         cmakeArgs: "-DCMAKE_PREFIX_PATH=$(OPENGEODEPATH)"
+    - template: unix-testing.yml@templates
+      parameters:
+        type: "Debug"
+        cmakeArgs: "-DCMAKE_PREFIX_PATH=$(OPENGEODEPATH);$(Build.SourcesDirectory)/build"
+    - template: coverage.yml@templates
+      parameters:
+        directory: "$(Build.SourcesDirectory)/build/bin"
 
 - job: Test_Windows
   dependsOn: Format
@@ -56,6 +63,10 @@ jobs:
       parameters:
         type: "Debug"
         cmakeArgs: "-DCMAKE_PREFIX_PATH=$(OPENGEODEPATH)"
+    - template: unix-testing.yml@templates
+      parameters:
+        type: "Debug"
+        cmakeArgs: "-DCMAKE_PREFIX_PATH=$(OPENGEODEPATH);$(Build.SourcesDirectory)/build"
 
 - template: semantic-release.yml@templates
   parameters:
