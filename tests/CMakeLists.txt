@@ -18,11 +18,15 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-set(TEST_DIRECTORY ${CMAKE_SOURCE_DIR}/tests)
+cmake_minimum_required(VERSION 3.5)
+    
+if(NOT TARGET MyModule::mylib)
+    project(MyModule CXX)
+    find_package(OpenGeode REQUIRED CONFIG)
+    enable_testing()
+endif()
+
 set(CTEST_OUTPUT_ON_FAILURE ON)
 
-set(test_config_file_in ${TEST_DIRECTORY}/tests_config.h.in)
-set(test_config_file ${PROJECT_BINARY_DIR}/mylib/tests_config.h)
-configure_file(${test_config_file_in} ${test_config_file})
-
 add_subdirectory(mylib)
+
