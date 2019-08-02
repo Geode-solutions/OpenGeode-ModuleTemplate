@@ -29,7 +29,7 @@ namespace mymodule
 {
     bool hello_world()
     {
-        geode::Logger::info( "Hello Geode World !" );
+        geode::Logger::info( "Hello Geode World!" );
         return true;
     }
 } // namespace mymodule
