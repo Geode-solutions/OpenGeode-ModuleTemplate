@@ -48,7 +48,6 @@ jobs:
     - template: windows-testing.yml@templates
       parameters:
         type: "Debug"
-        cmakeArgs: "-DCMAKE_PREFIX_PATH=$(OPENGEODEPATH)"
 
 - job: Test_Mac
   dependsOn: Format
@@ -66,6 +65,7 @@ jobs:
     - template: unix-testing.yml@templates
       parameters:
         type: "Debug"
+        cmakeArgs: "-DCMAKE_PREFIX_PATH=$(OPENGEODEPATH);$(Build.SourcesDirectory)/build"
 
 - template: semantic-release.yml@templates
   parameters:
