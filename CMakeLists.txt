@@ -25,14 +25,6 @@ project(MyModule CXX)
 
 option(MYMODULE_WITH_TESTS "Compile test projects" ON)
 
-#------------------------------------------------------------------------------------------------
-# Platform dependent settings
-if(UNIX)
-    add_compile_options(-Wall -Wextra -Wno-attributes)
-else()
-    add_compile_options(/DNOMINMAX)
-endif()
-
 # Get MyModule dependencies
 find_package(OpenGeode REQUIRED)
 
