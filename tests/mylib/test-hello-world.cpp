@@ -31,7 +31,7 @@ int main()
     try
     {
         OPENGEODE_EXCEPTION(
-            mymodule::hello_world(), "Hello World is not correct" );
+            mymodule::hello_world(), "[Test] Hello World is not correct" );
 
         geode::Logger::info( "TEST SUCCESS" );
         return 0;
