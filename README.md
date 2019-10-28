@@ -1,17 +1,18 @@
 <h1 align="center">OpenGeode-ModuleTemplate<sup><i>by Geode-solutions</i></sup></h1>
 <h3 align="center">Template for creating your own OpenGeode modules</h3>
 
+
 <p align="center">
-  <img src="https://dev.azure.com/GeodeSolutions/Geode/_apis/build/status/Geode-solutions.OpenGeode-ModuleTemplate?branchName=master" alt="Build Status">
-  <img src="https://img.shields.io/azure-devops/tests/GeodeSolutions/Geode/10/master.svg?compact_message" alt="Test Status">
-  <img src="https://img.shields.io/azure-devops/coverage/GeodeSolutions/Geode/10/master.svg" alt="Coverage Status">
+  <img src="https://github.com/Geode-solutions/OpenGeode-ModuleTemplate/workflows/CI/badge.svg" alt="Build Status">
+  <img src="https://github.com/Geode-solutions/OpenGeode-ModuleTemplate/workflows/CD/badge.svg" alt="Deploy Status">
+  <img src="https://codecov.io/gh/Geode-solutions/OpenGeode-ModuleTemplate/branch/master/graph/badge.svg" alt="Coverage Status">
   <img src="https://img.shields.io/github/release/Geode-solutions/OpenGeode-ModuleTemplate.svg" alt="Version">
 </p>
 
 <p align="center">
-  <img src="https://dev.azure.com/GeodeSolutions/Geode/_apis/build/status/Geode-solutions.OpenGeode-ModuleTemplate?branchName=master&jobName=Test_Windows&label=Windows" alt="Windows Build Status">
-  <img src="https://dev.azure.com/GeodeSolutions/Geode/_apis/build/status/Geode-solutions.OpenGeode-ModuleTemplate?branchName=master&jobName=Test_Ubuntu&label=Linux" alt="Linux Build Status">
-  <img src="https://dev.azure.com/GeodeSolutions/Geode/_apis/build/status/Geode-solutions.OpenGeode-ModuleTemplate?branchName=master&jobName=Test_Mac&label=macOS" alt="Apple Build Status">
+  <img src="https://img.shields.io/static/v1?label=Windows&logo=windows&logoColor=white&message=support&color=success" alt="Windows support">
+  <img src="https://img.shields.io/static/v1?label=Linux&logo=linux&logoColor=white&message=support&color=success" alt="Linux support">
+  <img src="https://img.shields.io/static/v1?label=macOS&logo=apple&logoColor=white&message=support&color=success" alt="macOS support">
 </p>
 
 <p align="center">
