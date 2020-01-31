@@ -18,7 +18,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-cmake_minimum_required(VERSION 3.7.2)
+cmake_minimum_required(VERSION 3.11)
 
 # Define the project
 project(MyModule CXX)
@@ -28,11 +28,9 @@ option(MYMODULE_WITH_TESTS "Compile test projects" ON)
 # Get MyModule dependencies
 find_package(OpenGeode REQUIRED)
 
-copy_windows_binaries(OpenGeode::basic)
-
 #------------------------------------------------------------------------------------------------
 # Configure the MyModule libraries
-add_geode_library(mylib)
+add_subdirectory(src/mylib)
 
 #------------------------------------------------------------------------------------------------
 # Optional modules configuration

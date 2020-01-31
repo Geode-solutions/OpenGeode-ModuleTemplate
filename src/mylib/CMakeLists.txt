@@ -18,13 +18,14 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-set(sources
-    "${lib_source_dir}/hello_world.cpp"
-)
-set(public_headers
-    "${lib_include_dir}/hello_world.h"
-)
-target_link_libraries(${target_name}
-    PRIVATE
+add_geode_library(
+    NAME mylib
+    FOLDER "mylib"
+    SOURCES
+        "common.cpp"
+        "hello_world.cpp"
+    PUBLIC_HEADERS
+        "hello_world.h"
+    PRIVATE_DEPENDENCIES
         OpenGeode::basic
 )
