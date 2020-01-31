@@ -18,7 +18,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-cmake_minimum_required(VERSION 3.7.2)
+cmake_minimum_required(VERSION 3.11)
     
 if(NOT TARGET MyModule::mylib)
     project(MyModule CXX)
@@ -26,8 +26,6 @@ if(NOT TARGET MyModule::mylib)
     find_package(MyModule REQUIRED CONFIG)
     enable_testing()
 endif()
-
-set(CTEST_OUTPUT_ON_FAILURE ON)
 
 add_subdirectory(mylib)
 
