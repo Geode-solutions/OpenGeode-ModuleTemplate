@@ -30,7 +30,17 @@ find_package(OpenGeode REQUIRED)
 
 #------------------------------------------------------------------------------------------------
 # Configure the MyModule libraries
-add_subdirectory(src/mylib)
+add_geode_library(
+    NAME mylib
+    FOLDER "mylib"
+    SOURCES
+        "common.cpp"
+        "hello_world.cpp"
+    PUBLIC_HEADERS
+        "hello_world.h"
+    PRIVATE_DEPENDENCIES
+        OpenGeode::basic
+)
 
 #------------------------------------------------------------------------------------------------
 # Optional modules configuration
