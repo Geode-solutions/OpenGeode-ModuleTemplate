@@ -19,7 +19,7 @@
 # SOFTWARE.
 
 add_geode_python_test(
-    SOURCE "test-hello-world.py"
+    SOURCE "test-py-hello-world.py"
     DEPENDENCIES
         ${PROJECT_NAME}::py_mylib
 )

@@ -28,5 +28,5 @@
 PYBIND11_MODULE( opengeode_mymodule_py_mylib, module )
 {
     module.doc() = "OpenGeode-ModuleTemplate Python binding for mylib";
-    module.def( "hello_world", &my_namespace::hello_world );
+    module.def( "hello_world", &mymodule::hello_world );
 }
