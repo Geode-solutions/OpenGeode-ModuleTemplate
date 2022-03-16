@@ -1,4 +1,4 @@
-# Copyright (c) 2019 - 2021 Geode-solutions
+# Copyright (c) 2019 - 2022 Geode-solutions
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -18,10 +18,29 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-@PACKAGE_INIT@ 
+add_subdirectory(src)
 
-include(CMakeFindDependencyMacro)
-find_dependency(OpenGeode)
+if(OPENGEODE_MYMODULE_WITH_TESTS)
+    add_subdirectory(tests)
+endif()
 
-# Load information for each target
-include(${CMAKE_CURRENT_LIST_DIR}/@PROJECT_NAME@_mylib_target.cmake)
+configure_file(
+    __init__.py
+    ${PROJECT_BINARY_DIR}/wheel/opengeode_mymodule/__init__.py
+)
+configure_file(
+    setup.py
+    ${PROJECT_BINARY_DIR}/wheel/setup.py
+)
+execute_process(
+    COMMAND ${PYTHON_EXECUTABLE} -m pip install --user -r requirements.txt
+    WORKING_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}
+)
+add_custom_target(wheel
+    COMMAND ${CMAKE_COMMAND} 
+        -DSOURCE_DIR="${CMAKE_BINARY_DIR}"
+        -DDEST_DIR="${CMAKE_BINARY_DIR}/wheel/opengeode_mymodule"
+        -P "${CMAKE_CURRENT_LIST_DIR}/copy_wheel.cmake"
+    COMMAND ${PYTHON_EXECUTABLE} setup.py bdist_wheel
+    WORKING_DIRECTORY ${PROJECT_BINARY_DIR}/wheel
+)

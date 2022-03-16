@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019 - 2021 Geode-solutions
+ * Copyright (c) 2019 - 2022 Geode-solutions
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -23,9 +23,9 @@
 
 #pragma once
 
-#include <mylib/mymodule_mylib_export.h>
+#include <mylib/opengeode_mymodule_mylib_export.h>
 
 namespace mymodule
 {
-    bool mymodule_mylib_api hello_world();
+    bool opengeode_mymodule_mylib_api hello_world();
 } // namespace mymodule

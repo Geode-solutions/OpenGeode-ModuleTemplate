@@ -1,4 +1,4 @@
-# Copyright (c) 2019 - 2021 Geode-solutions
+# Copyright (c) 2019 - 2022 Geode-solutions
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -18,12 +18,12 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-cmake_minimum_required(VERSION 3.11)
+cmake_minimum_required(VERSION 3.14)
     
-if(NOT TARGET MyModule::mylib)
-    project(MyModule CXX)
+if(NOT TARGET OpenGeode-MyModule::mylib)
+    project(OpenGeode-MyModule CXX)
     find_package(OpenGeode REQUIRED CONFIG)
-    find_package(MyModule REQUIRED CONFIG)
+    find_package(OpenGeode-MyModule REQUIRED CONFIG)
     enable_testing()
 endif()
 

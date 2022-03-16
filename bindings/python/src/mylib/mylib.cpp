@@ -21,23 +21,12 @@
  *
  */
 
-#include <geode/basic/assert.h>
-#include <geode/basic/logger.h>
+#include <pybind11/pybind11.h>
 
 #include <mylib/hello_world.h>
 
-int main()
+PYBIND11_MODULE( opengeode_mymodule_py_mylib, module )
 {
-    try
-    {
-        OPENGEODE_EXCEPTION(
-            mymodule::hello_world(), "[Test] Hello World is not correct" );
-
-        geode::Logger::info( "TEST SUCCESS" );
-        return 0;
-    }
-    catch( ... )
-    {
-        return geode::geode_lippincott();
-    }
+    module.doc() = "OpenGeode-ModuleTemplate Python binding for mylib";
+    module.def( "hello_world", &mymodule::hello_world );
 }

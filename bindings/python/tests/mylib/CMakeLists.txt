@@ -18,9 +18,8 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-add_geode_test(
-    SOURCE "test-hello-world.cpp"
+add_geode_python_test(
+    SOURCE "test-py-hello-world.py"
     DEPENDENCIES
-        OpenGeode::basic
-        ${PROJECT_NAME}::mylib
+        ${PROJECT_NAME}::py_mylib
 )

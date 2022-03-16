@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # Copyright (c) 2019 - 2022 Geode-solutions
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -18,9 +19,13 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-add_geode_test(
-    SOURCE "test-hello-world.cpp"
-    DEPENDENCIES
-        OpenGeode::basic
-        ${PROJECT_NAME}::mylib
-)
+import os, sys, platform
+if sys.version_info >= (3,8,0) and platform.system() == "Windows":
+    for path in [x.strip() for x in os.environ['PATH'].split(';') if x]:
+        os.add_dll_directory(path)
+
+import opengeode
+import opengeode_mymodule_py_mylib as mylib
+
+if __name__ == '__main__':
+    mylib.hello_world()
