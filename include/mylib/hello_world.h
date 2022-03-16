@@ -27,5 +27,5 @@
 
 namespace mymodule
 {
-    bool mymodule_mylib_api hello_world();
+    bool opengeode_mymodule_mylib_api hello_world();
 } // namespace mymodule
