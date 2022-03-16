@@ -18,12 +18,13 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-cmake_minimum_required(VERSION 3.11)
+cmake_minimum_required(VERSION 3.14)
 
 # Define the project
-project(MyModule CXX)
+project(OpenGeode-MyModule CXX)
 
-option(MYMODULE_WITH_TESTS "Compile test projects" ON)
+option(OPENGEODE_MYMODULE_WITH_TESTS "Compile test projects" ON)
+option(OPENGEODE_MYMODULE_WITH_PYTHON "Compile Python bindings" OFF)
 
 # Get MyModule dependencies
 find_package(OpenGeode REQUIRED)
@@ -44,11 +45,16 @@ add_geode_library(
 
 #------------------------------------------------------------------------------------------------
 # Optional modules configuration
-if(MYMODULE_WITH_TESTS)
+if(OPENGEODE_MYMODULE_WITH_TESTS)
     # Enable testing with CTest
     enable_testing()
-    message(STATUS "Configuring MyModule with tests")
+    message(STATUS "Configuring OpenGeode-MyModule with tests")
     add_subdirectory(tests)
+endif()
+
+if(OPENGEODE_MYMODULE_WITH_PYTHON)
+    message(STATUS "Configuring OpenGeode-MyModule with Python bindings")
+    add_subdirectory(bindings/python)
 endif()
 
 #------------------------------------------------------------------------------------------------
