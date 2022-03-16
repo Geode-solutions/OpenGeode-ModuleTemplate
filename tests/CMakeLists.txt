@@ -20,10 +20,10 @@
 
 cmake_minimum_required(VERSION 3.11)
     
-if(NOT TARGET MyModule::mylib)
-    project(MyModule CXX)
+if(NOT TARGET OpenGeode-MyModule::mylib)
+    project(OpenGeode-MyModule CXX)
     find_package(OpenGeode REQUIRED CONFIG)
-    find_package(MyModule REQUIRED CONFIG)
+    find_package(OpenGeode-MyModule REQUIRED CONFIG)
     enable_testing()
 endif()
 
