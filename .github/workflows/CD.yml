@@ -8,7 +8,7 @@ jobs:
   release-linux:
     uses: Geode-solutions/actions/.github/workflows/cd-linux.yml@master
     with:
-      name: OPENGEODE-MYMODULE
+      name: OPENGEODE_MYMODULE
       repos: OpenGeode
     secrets:
       TOKEN: ${{ secrets.TOKEN }}
@@ -17,7 +17,7 @@ jobs:
   release-linux-python:
     uses: Geode-solutions/actions/.github/workflows/cd-linux-python.yml@master
     with:
-      name: OPENGEODE-MYMODULE
+      name: OPENGEODE_MYMODULE
       repos: OpenGeode
     secrets:
       TOKEN: ${{ secrets.TOKEN }}
@@ -27,7 +27,7 @@ jobs:
   release-windows:
     uses: Geode-solutions/actions/.github/workflows/cd-windows.yml@master
     with:
-      name: OPENGEODE-MYMODULE
+      name: OPENGEODE_MYMODULE
       repos: OpenGeode
     secrets:
       TOKEN: ${{ secrets.TOKEN }}
@@ -36,7 +36,7 @@ jobs:
   release-windows-python:
     uses: Geode-solutions/actions/.github/workflows/cd-windows-python.yml@master
     with:
-      name: OPENGEODE-MYMODULE
+      name: OPENGEODE_MYMODULE
       repos: OpenGeode
     secrets:
       TOKEN: ${{ secrets.TOKEN }}
