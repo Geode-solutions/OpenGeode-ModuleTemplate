@@ -25,7 +25,7 @@ jobs:
     needs: format
     uses: Geode-solutions/actions/.github/workflows/ci-linux-python.yml@master
     with:
-      name: MYMODULE
+      name: OPENGEODE-MYMODULE
       repos: OpenGeode
     secrets:
       TOKEN: ${{ secrets.TOKEN }}
@@ -43,7 +43,7 @@ jobs:
     needs: format
     uses: Geode-solutions/actions/.github/workflows/ci-windows.yml@master
     with:
-      name: MYMODULE
+      name: OPENGEODE-MYMODULE
       repos: OpenGeode
     secrets:
       TOKEN: ${{ secrets.TOKEN }}
