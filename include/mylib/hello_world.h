@@ -23,7 +23,7 @@
 
 #pragma once
 
-#include <mylib/mymodule_mylib_export.h>
+#include <mylib/opengeode_mymodule_mylib_export.h>
 
 namespace mymodule
 {
