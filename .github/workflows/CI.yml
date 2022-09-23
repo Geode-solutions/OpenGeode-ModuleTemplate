@@ -2,24 +2,20 @@ name: CI
 
 on: 
   push:
-  pull_request:
   schedule:
     - cron: 0 0 * * *
 
 jobs:
   format:
     uses: Geode-solutions/actions/.github/workflows/format.yml@master
-    secrets:
-      TOKEN: ${{ secrets.TOKEN }}
+    secrets: inherit
       
   build-linux:
     needs: format
     uses: Geode-solutions/actions/.github/workflows/ci-linux.yml@master
     with:
       repos: OpenGeode
-    secrets:
-      TOKEN: ${{ secrets.TOKEN }}
-      SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+    secrets: inherit
 
   build-linux-python:
     needs: format
@@ -27,30 +23,31 @@ jobs:
     with:
       name: OPENGEODE_MYMODULE
       repos: OpenGeode
-    secrets:
-      TOKEN: ${{ secrets.TOKEN }}
-      SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+    secrets: inherit
 
   coverage:
     needs: format
     uses: Geode-solutions/actions/.github/workflows/coverage.yml@master
     with:
       repos: OpenGeode
-    secrets:
-      TOKEN: ${{ secrets.TOKEN }}  
+    secrets: inherit
   
   build-windows:
     needs: format
     uses: Geode-solutions/actions/.github/workflows/ci-windows.yml@master
     with:
+      repos: OpenGeode
+    secrets: inherit
+        
+  build-windows-python:
+    needs: format
+    uses: Geode-solutions/actions/.github/workflows/ci-windows-python.yml@master
+    with:
       name: OPENGEODE_MYMODULE
       repos: OpenGeode
-    secrets:
-      TOKEN: ${{ secrets.TOKEN }}
-      SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-        
+    secrets: inherit
+
   semantic-release:
     needs: [build-linux, build-linux-python, build-windows]
     uses: Geode-solutions/actions/.github/workflows/release.yml@master
-    secrets:
-      TOKEN: ${{ secrets.TOKEN }}
+    secrets: inherit

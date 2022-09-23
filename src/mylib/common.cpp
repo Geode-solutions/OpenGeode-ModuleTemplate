@@ -21,14 +21,17 @@
  *
  */
 
+#include <mylib/common.h>
+
 #include <geode/basic/common.h>
 
-namespace
+namespace mymodule
 {
-    OPENGEODE_LIBRARY_INITIALIZE( myLib )
+    OPENGEODE_LIBRARY_IMPLEMENTATION( MyModuleMyLib )
     {
         /* Here the functions to call when initializing the library
          * For exemple: registers, ...
          */
+        geode::OpenGeodeBasic::initialize();
     }
-} // namespace
+} // namespace mymodule

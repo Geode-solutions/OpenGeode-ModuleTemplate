@@ -19,4 +19,4 @@
 # SOFTWARE.
 
 
-from .opengeode_mymodule_py_mylib import *
+from .mylib import *
