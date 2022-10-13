@@ -29,6 +29,10 @@ configure_file(
     ${PROJECT_BINARY_DIR}/wheel/opengeode_mymodule/__init__.py
 )
 configure_file(
+    mylib.py
+    ${PROJECT_BINARY_DIR}/wheel/opengeode_mymodule/mylib.py
+)
+configure_file(
     setup.py
     ${PROJECT_BINARY_DIR}/wheel/setup.py
 )
