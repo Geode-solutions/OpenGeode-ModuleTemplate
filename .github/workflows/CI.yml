@@ -2,11 +2,14 @@ name: CI
 
 on: 
   push:
-  schedule:
-    - cron: 0 0 * * *
 
 jobs:
+  pip:
+    uses: Geode-solutions/actions/.github/workflows/upgrade-pip.yml@master
+    secrets: inherit
+
   format:
+    needs: pip
     uses: Geode-solutions/actions/.github/workflows/format.yml@master
     secrets: inherit
       
@@ -48,6 +51,6 @@ jobs:
     secrets: inherit
 
   semantic-release:
-    needs: [build-linux, build-linux-python, build-windows]
+    needs: [build-linux, build-linux-python, build-windows, build-windows-python]
     uses: Geode-solutions/actions/.github/workflows/release.yml@master
     secrets: inherit

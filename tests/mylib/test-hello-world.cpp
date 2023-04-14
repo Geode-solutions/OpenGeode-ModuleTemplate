@@ -30,7 +30,7 @@ int main()
 {
     try
     {
-        mymodule::MyModuleMyLib::initialize();
+        mymodule::MyModuleMyLibLibrary::initialize();
         OPENGEODE_EXCEPTION(
             mymodule::hello_world(), "[Test] Hello World is not correct" );
 
