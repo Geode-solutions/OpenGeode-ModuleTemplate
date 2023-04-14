@@ -25,7 +25,7 @@ if(OPENGEODE_MYMODULE_WITH_TESTS)
 endif()
 
 add_geode_python_wheel(
-    NAME "OpenGeode-core"
+    NAME "OpenGeode-ModuleTemplate"
     DESCRIPTION 
         "Open source framework for representing and manipulating geometric models"
     MODULES
