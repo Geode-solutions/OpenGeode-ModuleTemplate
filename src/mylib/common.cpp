@@ -32,6 +32,6 @@ namespace mymodule
         /* Here the functions to call when initializing the library
          * For exemple: registers, ...
          */
-        geode::OpenGeodeBasic::initialize();
+        geode::OpenGeodeBasicLibrary::initialize();
     }
 } // namespace mymodule
