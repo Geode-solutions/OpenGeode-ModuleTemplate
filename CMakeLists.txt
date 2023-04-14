@@ -29,7 +29,7 @@ option(OPENGEODE_MYMODULE_WITH_TESTS "Compile test projects" ON)
 option(OPENGEODE_MYMODULE_WITH_PYTHON "Compile Python bindings" OFF)
 
 # Get MyModule dependencies
-find_package(OpenGeode REQUIRED)
+find_package(OpenGeode REQUIRED CONFIG)
 
 #------------------------------------------------------------------------------------------------
 # Configure the MyModule libraries

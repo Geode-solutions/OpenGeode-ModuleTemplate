@@ -4,5 +4,5 @@
 
 import opengeode
 
-from .opengeode_mymodule_py_mylib import *
-MyModuleMyLib.initialize()
+from opengeode_mymodule_py_mylib import *
+MyModuleMyLibLibrary.initialize()
