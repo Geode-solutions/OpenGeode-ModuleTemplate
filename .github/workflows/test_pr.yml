@@ -9,5 +9,5 @@ jobs:
     uses: Geode-solutions/actions/.github/workflows/cpp-test-pr.yml@master
     with:
       name: OPENGEODE_MYMODULE
-      directory: opengeode
+      repos: ${{ vars.REPOS }}
     secrets: inherit
