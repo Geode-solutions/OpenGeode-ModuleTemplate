@@ -1,0 +1,15 @@
+name: Test
+
+on:
+  push:
+    branches-ignore:
+      - master
+      - next
+
+jobs:
+  test:
+    uses: Geode-solutions/actions/.github/workflows/cpp-test.yml@master
+    with:
+      name: OPENGEODE
+      directory: opengeode
+    secrets: inherit
