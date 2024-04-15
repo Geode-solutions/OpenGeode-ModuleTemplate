@@ -11,5 +11,5 @@ jobs:
     uses: Geode-solutions/actions/.github/workflows/cpp-test.yml@master
     with:
       name: OPENGEODE
-      directory: opengeode
+      repos: ${{ vars.REPOS }}
     secrets: inherit
