@@ -1,4 +1,4 @@
-# Copyright (c) 2019 - 2022 Geode-solutions
+# Copyright (c) 2019 - 2024 Geode-solutions
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -40,6 +40,7 @@ add_geode_library(
         "common.cpp"
         "hello_world.cpp"
     PUBLIC_HEADERS
+        "common.h"
         "hello_world.h"
     PRIVATE_DEPENDENCIES
         OpenGeode::basic
@@ -50,12 +51,12 @@ add_geode_library(
 if(OPENGEODE_MYMODULE_WITH_TESTS)
     # Enable testing with CTest
     enable_testing()
-    message(STATUS "Configuring OpenGeode-MyModule with tests")
+    message(STATUS "Configuring with tests")
     add_subdirectory(tests)
 endif()
 
 if(OPENGEODE_MYMODULE_WITH_PYTHON)
-    message(STATUS "Configuring OpenGeode-MyModule with Python bindings")
+    message(STATUS "Configuring with Python bindings")
     add_subdirectory(bindings/python)
 endif()
 
