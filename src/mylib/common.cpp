@@ -21,9 +21,9 @@
  *
  */
 
-#include <mylib/common.h>
+#include <mylib/common.hpp>
 
-#include <geode/basic/library.h>
+#include <geode/basic/library.hpp>
 
 namespace mymodule
 {

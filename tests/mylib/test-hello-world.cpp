@@ -21,10 +21,10 @@
  *
  */
 
-#include <geode/basic/assert.h>
-#include <geode/basic/logger.h>
+#include <geode/basic/assert.hpp>
+#include <geode/basic/logger.hpp>
 
-#include <mylib/hello_world.h>
+#include <mylib/hello_world.hpp>
 
 int main()
 {
