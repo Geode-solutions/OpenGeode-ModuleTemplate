@@ -4,9 +4,9 @@
 
 #pragma once
 
-#include <geode/basic/common.h>
-#include <geode/basic/library.h>
-#include <mylib/opengeode_mymodule_mylib_export.h>
+#include <geode/basic/common.hpp>
+#include <geode/basic/library.hpp>
+#include <mylib/opengeode_mymodule_mylib_export.hpp>
 
 namespace mymodule
 {

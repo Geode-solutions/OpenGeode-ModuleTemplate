@@ -21,9 +21,9 @@
  *
  */
 
-#include <mylib/hello_world.h>
+#include <mylib/hello_world.hpp>
 
-#include <geode/basic/logger.h>
+#include <geode/basic/logger.hpp>
 
 namespace mymodule
 {
