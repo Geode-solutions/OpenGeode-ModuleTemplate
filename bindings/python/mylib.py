@@ -1,5 +1,5 @@
 #
-# Copyright (c) 2019 - 2024 Geode-solutions. All rights reserved.
+# Copyright (c) 2019 - 2025 Geode-solutions. All rights reserved.
 #
 
 import opengeode
