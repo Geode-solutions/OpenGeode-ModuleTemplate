@@ -23,7 +23,7 @@
 
 #include <pybind11/pybind11.h>
 
-#include <mylib/hello_world.h>
+#include <mylib/hello_world.hpp>
 
 PYBIND11_MODULE( opengeode_mymodule_py_mylib, module )
 {
