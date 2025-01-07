@@ -40,8 +40,8 @@ add_geode_library(
         "common.cpp"
         "hello_world.cpp"
     PUBLIC_HEADERS
-        "common.h"
-        "hello_world.h"
+        "common.hpp"
+        "hello_world.hpp"
     PRIVATE_DEPENDENCIES
         OpenGeode::basic
 )

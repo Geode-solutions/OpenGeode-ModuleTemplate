@@ -23,7 +23,7 @@
 
 #pragma once
 
-#include <mylib/common.h>
+#include <mylib/common.hpp>
 
 namespace mymodule
 {
